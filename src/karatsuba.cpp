@@ -1,9 +1,8 @@
-#include<algorithm>
+ #include<algorithm>
 #include "karatsuba.hpp"
 using namespace std;
 
-static Numero karatsubaRec(Numero X, Numero Y, size_t umbral)
-{
+static Numero karatsubaRec(Numero X, Numero Y, size_t umbral){
     size_t n = max(X.size(), Y.size());
     if (n <= umbral){
         return multiplicacionClasica(X, Y);
@@ -27,8 +26,7 @@ static Numero karatsubaRec(Numero X, Numero Y, size_t umbral)
     return R;
 }
 
-Numero karatsuba(const Numero& A, const Numero& B, size_t umbral)
-{
+Numero karatsuba(const Numero& A, const Numero& B, size_t umbral){
     if (umbral < 1) umbral = 1;
     Numero X = A, Y = B;
     normalizar(X);

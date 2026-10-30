@@ -9,8 +9,8 @@ using namespace std;
 
 using Numero = std::vector<int>; 
 
-Numero desde_cadena(string& cadena);
-string a_cadena(Numero& A);
+Numero desde_cadena(const string& cadena);
+string a_cadena(const Numero& A);
 
 void normalizar(Numero& A);
 Numero multiplicacionClasica(Numero& A, Numero& B);
